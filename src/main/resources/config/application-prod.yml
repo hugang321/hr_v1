@@ -1,0 +1,23 @@
+server:
+  port: 8080
+  sessionTimeout: 30
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.10.68:3306/smartone_v2?allowMultiQueries=true&amp;useUnicode=true&amp;characterEncoding=UTF-8
+    username: dev
+    password: siping
+    hikari:
+      maxLifetime: 1765000
+      maximumPoolSize: 15
+cas:
+  client-host-url: http://app.smartone.com/fi
+  server-url-prefix: http://sso.smartone.com/sso
+  server-login-url: http://sso.smartone.com/sso/login
+  validation-type: CAS
+remote:
+  erp-host-name: http://app.smartone.com
+  plm-host-name:
+  crm-host-name:
+  pm-host-name:

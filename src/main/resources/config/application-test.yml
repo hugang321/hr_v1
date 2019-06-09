@@ -1,0 +1,28 @@
+server:
+  port: 8090
+  sessionTimeout: 60
+  contextPath: /fi
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/smartone_v2?allowMultiQueries=true&amp;useUnicode=true&amp;characterEncoding=UTF-8
+    username: root
+    password: siping
+    hikari:
+      maxLifetime: 1765000
+      maximumPoolSize: 15
+cas:
+  client-host-url: http://211.149.245.94:8090/fi
+  server-url-prefix: http://192.168.10.11/sso
+  server-login-url: http://192.168.10.11/sso/login
+  validation-type: CAS
+remote:
+  erp-host-name: http://127.0.0.1:8080
+  plm-host-name:
+  crm-host-name:
+  pm-host-name:
+# 前端页面地址.
+host:
+  frontendOrigin: http://211.149.245.94
+
